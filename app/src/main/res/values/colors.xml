@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_color">#1B3C53</color>
+    <color name="btn_color">#456882</color>
+    <color name="input_color">#3C467B</color>
+    <color name="ripple_color">#234C6A</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
