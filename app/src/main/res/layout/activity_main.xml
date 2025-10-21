@@ -21,11 +21,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_inputOutput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_numberGroup"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".32"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title">
 
@@ -39,6 +42,8 @@
             android:text="C"
             android:textSize="24sp"
             app:backgroundTint="@null"
+
+            app:layout_constraintHeight_percent=".35"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,6 +71,7 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_fahrenheit"
             android:layout_width="wrap_content"
@@ -91,6 +97,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btn_fahrenheit"
             app:layout_constraintTop_toTopOf="@id/btn_fahrenheit">
+
             <TextView
                 android:id="@+id/tv_output"
                 android:layout_width="match_parent"
@@ -103,21 +110,265 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_swap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
             android:background="@drawable/custome_bg_color"
-            app:backgroundTint="@null"
             android:text="Swap"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@id/btn_fahrenheit"
-            app:layout_constraintEnd_toEndOf="@id/ll_output"
+            app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
-            />
+            app:layout_constraintEnd_toEndOf="@id/ll_output"
+            app:layout_constraintTop_toBottomOf="@id/btn_fahrenheit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_numberGroup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_inputOutput">
+        <!--first row start-->
+        <LinearLayout
+            android:id="@+id/ll_numberFirstRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            app:layout_constraintBottom_toTopOf="@id/ll_numberSecondRow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="1"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="2"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="3"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_clear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="C"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+        <!--first row end-->
+        <!-- second row start-->
+        <LinearLayout
+            android:id="@+id/ll_numberSecondRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            app:layout_constraintBottom_toTopOf="@id/ll_numberThirdRow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_numberFirstRow">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="4"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="5"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="6"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_plus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="+"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+        <!--second row end-->
+        <!--third row start-->
+        <LinearLayout
+            android:id="@+id/ll_numberThirdRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            app:layout_constraintBottom_toBottomOf="@id/ll_numberFourthRow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_numberSecondRow">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="7"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="8"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="9"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_minus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="-"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+        <!--third row end-->
+        <!--fourth row start-->
+        <LinearLayout
+            android:id="@+id/ll_numberFourthRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_numberThirdRow">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="50"
+                android:background="@drawable/custome_bg_color"
+                android:text="0"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_dot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="."
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="25"
+                android:background="@drawable/custome_bg_color"
+                android:text="="
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+        <!--fourth row end-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
