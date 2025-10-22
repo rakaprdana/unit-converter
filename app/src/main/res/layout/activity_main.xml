@@ -149,7 +149,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -161,7 +161,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_2"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -173,7 +173,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_3"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -185,7 +185,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_clear"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -211,7 +211,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_4"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -223,7 +223,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_5"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -235,7 +235,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_6"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -247,7 +247,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_plus"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -273,7 +273,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_7"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -285,7 +285,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_8"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -297,7 +297,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_9"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -309,7 +309,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_minus"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -334,7 +334,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_0"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="50"
                 android:background="@drawable/custome_bg_color"
@@ -346,7 +346,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_dot"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
@@ -358,7 +358,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_count"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"

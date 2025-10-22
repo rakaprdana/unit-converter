@@ -4,7 +4,7 @@
     <item>
         <shape android:shape="rectangle">
             <solid android:color="@color/btn_color"/>
-            <corners android:radius="44dp" />
+            <corners android:radius="12dp" />
         </shape>
     </item>
 </ripple>
