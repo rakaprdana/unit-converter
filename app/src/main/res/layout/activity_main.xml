@@ -64,7 +64,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="20dp"
                 android:gravity="center|end"
-                android:text="@string/num0"
+
                 android:textColor="@color/white"
                 android:textSize="24dp"
                 android:textStyle="bold" />
@@ -104,7 +104,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="20dp"
                 android:gravity="center|end"
-                android:text="@string/num0"
+
                 android:textColor="@color/white"
                 android:textSize="24dp"
                 android:textStyle="bold" />

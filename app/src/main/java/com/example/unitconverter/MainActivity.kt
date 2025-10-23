@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
     //Pendefinisian view referenced
@@ -35,6 +36,62 @@ class MainActivity : AppCompatActivity() {
     private val btnKoma by lazy { findViewById<Button>(R.id.btn_koma) }
     private val btnCount by lazy { findViewById<Button>(R.id.btn_count) }
 
+    //define variable for view model
+    private val viewModel by lazy { ViewModelProvider(this).get(MainViewModel::class.java) }
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+        observeInput()
+
+        btnOne.setButtonClickListener("1")
+        btnTwo.setButtonClickListener("2")
+        btnThree.setButtonClickListener("3")
+        btnClear.setOnClickListener {
+            viewModel.clearInput()
+        }
+
+        btnFour.setButtonClickListener("4")
+        btnFive.setButtonClickListener("5")
+        btnSix.setButtonClickListener("6")
+        btnPlus.setButtonClickListener("+")
+
+        btnSeven.setButtonClickListener("7")
+        btnEight.setButtonClickListener("8")
+        btnNine.setButtonClickListener("9")
+        btnMinus.setButtonClickListener("-")
+
+        btnZero.setButtonClickListener("0")
+        btnKoma.setButtonClickListener(".")
+
+
+        buttonSwap.setOnClickListener {
+            animateInputIndicator()
+        }
+    }
+// extension function for setOnClickListener
+
+    private fun Button.setButtonClickListener(value: String) {
+        setOnClickListener {
+            viewModel.setInput(value)
+        }
+    }
+
+    // function for display input
+    private fun observeInput() {
+        viewModel.input.observe(this) { input ->
+            tvInput.text = input
+        }
+    }
+
+    // function for animation input indicator
     private fun animateInputIndicator() {
         //get initial position => ambil posisi awal
         val initialY1 = buttonCelcius.y
@@ -61,17 +118,4 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-        buttonSwap.setOnClickListener {
-            animateInputIndicator()
-        }
-    }
 }
