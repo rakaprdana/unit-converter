@@ -35,15 +35,14 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_celcius"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginEnd="1dp"
             android:background="@drawable/custome_bg_color"
             android:clickable="false"
-            android:text="C"
+            android:text="@string/celcius"
             android:textSize="24sp"
             app:backgroundTint="@null"
-
-            app:layout_constraintHeight_percent=".35"
+            app:layout_constraintHeight_percent=".32"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,7 +64,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="20dp"
                 android:gravity="center|end"
-                android:text="0"
+                android:text="@string/num0"
                 android:textColor="@color/white"
                 android:textSize="24dp"
                 android:textStyle="bold" />
@@ -75,14 +74,15 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_fahrenheit"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="1dp"
             android:background="@drawable/custome_bg_color"
             android:clickable="false"
-            android:text="F"
+            android:text="@string/fahrenheit"
             android:textSize="24sp"
             app:backgroundTint="@null"
+            app:layout_constraintHeight_percent=".32"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_celcius" />
 
@@ -104,7 +104,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="20dp"
                 android:gravity="center|end"
-                android:text="0"
+                android:text="@string/num0"
                 android:textColor="@color/white"
                 android:textSize="24dp"
                 android:textStyle="bold" />
@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="8dp"
             android:background="@drawable/custome_bg_color"
-            android:text="Swap"
+            android:text="@string/swap"
             app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/ll_output"
@@ -129,7 +129,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -153,7 +153,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="1"
+                android:text="@string/num1"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -165,7 +165,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="2"
+                android:text="@string/num2"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -177,7 +177,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="3"
+                android:text="@string/num3"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -189,7 +189,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="C"
+                android:text="@string/clear"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -215,7 +215,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="4"
+                android:text="@string/num4"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -227,7 +227,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="5"
+                android:text="@string/num5"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -239,7 +239,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="6"
+                android:text="@string/num6"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -251,7 +251,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="+"
+                android:text="@string/plus"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -277,7 +277,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="7"
+                android:text="@string/num7"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -289,7 +289,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="8"
+                android:text="@string/num8"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -301,7 +301,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="9"
+                android:text="@string/num9"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -313,7 +313,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="-"
+                android:text="@string/minus"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -338,19 +338,19 @@
                 android:layout_margin="2dp"
                 android:layout_weight="50"
                 android:background="@drawable/custome_bg_color"
-                android:text="0"
+                android:text="@string/num0"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_dot"
+                android:id="@+id/btn_koma"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="."
+                android:text="@string/koma"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
@@ -362,7 +362,7 @@
                 android:layout_margin="2dp"
                 android:layout_weight="25"
                 android:background="@drawable/custome_bg_color"
-                android:text="="
+                android:text="@string/count"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
