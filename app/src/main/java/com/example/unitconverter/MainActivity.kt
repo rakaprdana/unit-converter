@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
     private val btnZero by lazy { findViewById<Button>(R.id.btn_0) }
     private val btnKoma by lazy { findViewById<Button>(R.id.btn_koma) }
-    private val btnCount by lazy { findViewById<Button>(R.id.btn_count) }
+    private val btnConvert by lazy { findViewById<Button>(R.id.btn_convert) }
 
     //define variable for view model
     private val viewModel by lazy { ViewModelProvider(this).get(MainViewModel::class.java) }
@@ -50,6 +50,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         observeInput()
+        observeOutput()
+
 
         btnOne.setButtonClickListener("1")
         btnTwo.setButtonClickListener("2")
@@ -74,20 +76,32 @@ class MainActivity : AppCompatActivity() {
 
         buttonSwap.setOnClickListener {
             animateInputIndicator()
+            viewModel.switchInputUnit()
+            viewModel.resetInputOutput()
+        }
+
+        btnConvert.setOnClickListener {
+            viewModel.convertUnit()
         }
     }
-// extension function for setOnClickListener
 
+    // extension function for setOnClickListener
     private fun Button.setButtonClickListener(value: String) {
         setOnClickListener {
             viewModel.setInput(value)
         }
     }
 
-    // function for display input
+    // function for display input & output
     private fun observeInput() {
         viewModel.input.observe(this) { input ->
             tvInput.text = input
+        }
+    }
+
+    private fun observeOutput() {
+        viewModel.output.observe(this) { output ->
+            tvOutput.text = output
         }
     }
 
